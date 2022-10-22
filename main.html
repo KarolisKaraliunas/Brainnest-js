@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Assignments 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>JavaScript Assignments 1 - Part 2</h1>
+
+<hr>
+
+
+<h3>Assignment (Main JavaScript Project)</h3>
+
+<ul id="choiceList">
+    <li><p id="choice"><input type='checkbox' onchange='handleChange(this);'>Use default (Rock)? </p></li>
+    <li>Or</li>
+    <li id="pSelection">Enter value: <input type="text" id="selection" placeholder="Enter your choice"></li>
+</ul>
+
+<button class="btn" onclick="beginGame()">Play</button>
+
+<p id="playerWon"><b>Player won: </b></p>
+
+<p id="computerWon"><b>Computer won: </b></p>
+
+<p id="finalwinner"></p>
+
+</body>
+<script src="js/script.js"></script>
+
+</html>
