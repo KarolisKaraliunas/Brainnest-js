@@ -44,8 +44,8 @@ const ans3 = document.getElementById("ans3");
 function getCircumference(radius) { return 2 * pi * radius; }
 function getArea(radius) { return radius * radius * pi; }
 
-var circumference = getCircumference(r);
-var circArea = getArea(r);
+let circumference = getCircumference(r);
+let circArea = getArea(r);
 
 // Append to the answer
 ans3.innerHTML = "<pre>" + "The circumference of a circle is: " + circumference +  "\n" + "The area of a circle is: " + circArea + "</pre>";
@@ -58,15 +58,15 @@ ans3.innerHTML = "<pre>" + "The circumference of a circle is: " + circumference 
 //////////////////////////////////////////////////////////////////////////////
 
 // Define answer field
-var ans4 = document.getElementById("ans4");
+let ans4 = document.getElementById("ans4");
 
 // Once the button is clicked
 function goCompare(){
     // Get the first int
-    var int1 = document.getElementById("a2a1").value ;
+    let int1 = document.getElementById("a2a1").value ;
 
     // Get the second int 
-    var int2 = document.getElementById("a2a2").value ;
+    let int2 = document.getElementById("a2a2").value ;
 
     // Compare the ints and show answer
     if(int1 > int2) {
@@ -87,14 +87,14 @@ function goCompare(){
 //////////////////////////////////////////////////////////////////////////////
 
 // Define answer field
-var ans5 = document.getElementById("ans5");
+let ans5 = document.getElementById("ans5");
 
 // Once the button is clicked
 function evenOrOdd(){
-    var checkBox = document.getElementById("methodType");
+    let checkBox = document.getElementById("methodType");
 
     // Get the first int
-    var int1 = document.getElementById("a2b1").value ;
+    let int1 = document.getElementById("a2b1").value ;
 
     if (checkBox.checked == true) { 
         // Lambda for simplification 
@@ -122,14 +122,14 @@ function evenOrOdd(){
 //////////////////////////////////////////////////////////////////////////////
 
 // Hide selection at first
-var pHidden = document.getElementById("pSelection");
+let pHidden = document.getElementById("pSelection");
 
 // Set player values 
-var playerSelection;
-var defaultValue;
-var compChoice ;
-var playerScore = 0;
-var computerScore = 0;
+let playerSelection;
+let defaultValue;
+let compChoice ;
+let playerScore = 0;
+let computerScore = 0;
 
 // Handle checkbox changes hide / unhide
 function handleChange(checkbox) {
@@ -163,7 +163,7 @@ function playerPickOption() {
     if(defaultValue) {
         playerSelection = "rock" ;
     } else {
-        var def = document.getElementById("selection").value;
+        let def = document.getElementById("selection").value;
         def = def.toLowerCase();
         console.log(def);
         if(def === "rock" || def === "paper" || def === "scissors") {
@@ -176,7 +176,7 @@ function playerPickOption() {
 
 function beginGame() {
     console.clear();
-    var finalScore = document.getElementById("finalwinner");
+    let finalScore = document.getElementById("finalwinner");
     playerScore = 0;
     computerScore = 0;
     finalScore.innerHTML = "";
@@ -204,13 +204,13 @@ function beginGame() {
 
 function computerWon() {
     computerScore++;
-    var computerScoreShown = document.getElementById("computerWon");
+    let computerScoreShown = document.getElementById("computerWon");
     computerScoreShown.innerHTML = "Computer won: " + computerScore + " times";
 }
 
 function playerWon() {
     playerScore++;
-    var playerScoreShown = document.getElementById("playerWon");
+    let playerScoreShown = document.getElementById("playerWon");
     playerScoreShown.innerHTML = "Player won: " + playerScore + " times";
 }
 
